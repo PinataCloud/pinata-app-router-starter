@@ -1,27 +1,36 @@
 @tailwind base;
+@layer base {
+  :root {
+    --color-accent: #6d57ff;
+    --color-secondary: #8A79FF;
+    --color-light: #f6f6f6;
+    --color-dark: #000;
+    --color-grey: #eee;
+  }
+
+  html {
+    @apply p-0 m-0 scroll-smooth w-full h-full;
+  }
+
+  html body {
+    @apply m-0 h-screen w-full bg-light text-black font-telegraf;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-agrandir font-bold;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+
+  a {
+    @apply text-black;
+  }
+
+  button {
+    @apply font-telegraf font-bold;
+  }
+
+}
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
